@@ -1,0 +1,31 @@
+Variables,Coef.,Std.,z,P>|z|,SubModel
+leg2_2,0.0584468,0.0922583,0.63,0.526,Negative Binomial
+leg2_3,0.2750316,0.0903196,3.05,0.002,Negative Binomial
+trafficsignal,0.9560149,0.0650063,14.71,0,Negative Binomial
+mean_lts,0.567662,0.0248822,22.81,0,Negative Binomial
+natwalkind,0.0454362,0.0132514,3.43,0.001,Negative Binomial
+count_cbgbusstops,0.0021866,0.0036159,0.6,0.545,Negative Binomial
+pct_ao0100,0.0075727,0.001745,4.34,0,Negative Binomial
+d1d,0.0035648,0.0009418,3.79,0,Negative Binomial
+d2a_ephhm,0.2352119,0.135982,1.73,0.084,Negative Binomial
+d3a,0.0168575,0.004603,3.66,0,Negative Binomial
+d3amm,-0.0021106,0.0074513,-0.28,0.777,Negative Binomial
+d3bao,-0.0177694,0.0060807,-2.92,0.003,Negative Binomial
+percentmalepopulation,-0.0016007,0.002916,-0.55,0.583,Negative Binomial
+percentpopulationover65,-0.0097248,0.0030963,-3.14,0.002,Negative Binomial
+percentpopulationunder18,-0.0026097,0.0032684,-0.8,0.425,Negative Binomial
+percentblackpopulation,0.001472,0.0009832,1.5,0.134,Negative Binomial
+percentcartruckvan,0.0098083,0.0027011,3.63,0,Negative Binomial
+percentpublictransportation,0.0106382,0.0033758,3.15,0.002,Negative Binomial
+percentwalkbike,0.0058812,0.0038454,1.53,0.126,Negative Binomial
+r_pctlowwa100,0.0128294,0.0039089,3.28,0.001,Negative Binomial
+percentunemployed,0.0082485,0.0056564,1.46,0.145,Negative Binomial
+percentenrolledinschool,-0.0011677,0.0027287,-0.43,0.669,Negative Binomial
+vehicle_volume,0.000426,0.0000331,12.89,0,Negative Binomial
+nonmotor_volume,0.0017031,0.0004076,4.18,0,Negative Binomial
+_cons,-7.785366,0.3187808,-24.42,0,Negative Binomial
+inflate,,,,,
+nonmotor_volume,-0.1447281,0.0763142,-1.9,0.058,Logit
+_cons,1.183534,0.1819023,6.51,0,Logit
+/lnalpha,0.314805,0.1722458,1.83,0.068,
+alpha,1.369992,0.2359754,0.9774671,1.920145,

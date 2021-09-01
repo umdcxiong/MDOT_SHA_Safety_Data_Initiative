@@ -1,0 +1,203 @@
+Using data in "link_data.csv" file
+
+
+++++++++++++++ Model A: ZINB Model with the "totalpedbikecrashes" as the DV and with LBS variables (and with "nonmotor_volume" as the inflated variable and Robust SEs) +++++++++++++
+
+
+. zinb totalpedbikecrashes length i.function2 i.walkbikeallowed lts i.bikelaneexistance natwalkind count_cbgbusstops pct_ao0100 d1d d2a_ephhm d3a d3amm d3
+> bao percentmalepopulation percentpopulationover65 percentpopulationunder18 percentblackpopulation percentcartruckvan percentpublictransportation percentwa
+> lkbike r_pctlowwa100 percentunemployed percentenrolledinschool vehicle_volume nonmotor_volume, inflate (nonmotor_volume) robust
+
+Fitting constant-only model:
+
+Iteration 0:   log pseudolikelihood = -19737.021  (not concave)
+Iteration 1:   log pseudolikelihood = -19053.074  
+Iteration 2:   log pseudolikelihood = -17745.952  
+Iteration 3:   log pseudolikelihood = -17600.474  
+Iteration 4:   log pseudolikelihood = -17456.286  
+Iteration 5:   log pseudolikelihood = -17422.025  
+Iteration 6:   log pseudolikelihood =  -17419.15  
+Iteration 7:   log pseudolikelihood = -17419.115  
+Iteration 8:   log pseudolikelihood = -17419.115  
+
+Fitting full model:
+
+Iteration 0:   log pseudolikelihood = -17419.115  
+Iteration 1:   log pseudolikelihood = -16016.282  (not concave)
+Iteration 2:   log pseudolikelihood = -15866.336  (not concave)
+Iteration 3:   log pseudolikelihood =  -15795.77  (not concave)
+Iteration 4:   log pseudolikelihood = -15206.018  
+Iteration 5:   log pseudolikelihood = -15060.058  
+Iteration 6:   log pseudolikelihood =  -15030.56  
+Iteration 7:   log pseudolikelihood = -14997.256  
+Iteration 8:   log pseudolikelihood = -14977.019  
+Iteration 9:   log pseudolikelihood = -14974.094  
+Iteration 10:  log pseudolikelihood = -14973.948  
+Iteration 11:  log pseudolikelihood = -14973.948  
+
+Zero-inflated negative binomial regression      Number of obs     =    440,161
+                                                Nonzero obs       =      2,900
+                                                Zero obs          =    437,261
+
+Inflation model      = logit                    Wald chi2(30)     =    4546.23
+Log pseudolikelihood = -14973.95                Prob > chi2       =     0.0000
+
+---------------------------------------------------------------------------------------------
+                            |               Robust
+        totalpedbikecrashes |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+----------------------------+----------------------------------------------------------------
+totalpedbikecrashes         |
+                     length |   .0003298   .0000216    15.30   0.000     .0002875    .0003721
+                            |
+                  function2 |
+                         2  |  -.0216582    .073544    -0.29   0.768    -.1658018    .1224855
+                         3  |  -2.562051   .3163575    -8.10   0.000      -3.1821   -1.942002
+                         4  |   -2.66337   .1662535   -16.02   0.000    -2.989221    -2.33752
+                         5  |   -.631929   .1105535    -5.72   0.000    -.8486099   -.4152482
+                         6  |  -1.641166   .1114809   -14.72   0.000    -1.859664   -1.422667
+                         7  |  -.1644794   .0799614    -2.06   0.040     -.321201   -.0077579
+                            |
+          1.walkbikeallowed |  -3.173764   .4532624    -7.00   0.000    -4.062142   -2.285386
+                        lts |   .2236115   .0362615     6.17   0.000     .1525404    .2946827
+        1.bikelaneexistance |  -.2347253    .146946    -1.60   0.110    -.5227341    .0532835
+                 natwalkind |   .0637627   .0157867     4.04   0.000     .0328213    .0947041
+          count_cbgbusstops |  -.0056497   .0029737    -1.90   0.057     -.011478    .0001787
+                 pct_ao0100 |   .0089676   .0015295     5.86   0.000     .0059699    .0119654
+                        d1d |   .0063736   .0007948     8.02   0.000     .0048159    .0079313
+                  d2a_ephhm |   .3628903   .1718242     2.11   0.035     .0261211    .6996594
+                        d3a |   .0174124   .0043108     4.04   0.000     .0089634    .0258614
+                      d3amm |  -.0056648   .0065261    -0.87   0.385    -.0184557    .0071261
+                      d3bao |  -.0087585   .0047521    -1.84   0.065    -.0180725    .0005555
+      percentmalepopulation |  -.0003291    .002547    -0.13   0.897    -.0053211    .0046629
+    percentpopulationover65 |  -.0091823   .0027064    -3.39   0.001    -.0144868   -.0038779
+   percentpopulationunder18 |   .0024924   .0028417     0.88   0.380    -.0030772     .008062
+     percentblackpopulation |   .0023809   .0008949     2.66   0.008     .0006269     .004135
+         percentcartruckvan |   .0115385   .0025644     4.50   0.000     .0065125    .0165646
+percentpublictransportation |   .0151421    .003082     4.91   0.000     .0091014    .0211828
+            percentwalkbike |   .0043889   .0036072     1.22   0.224    -.0026812    .0114589
+              r_pctlowwa100 |   .0128772   .0036954     3.48   0.000     .0056343    .0201201
+          percentunemployed |   .0184629   .0051644     3.58   0.000     .0083408    .0285849
+    percentenrolledinschool |   -.005555   .0023466    -2.37   0.018    -.0101543   -.0009557
+             vehicle_volume |    .000152   .0000543     2.80   0.005     .0000455    .0002585
+            nonmotor_volume |   .0040765   .0009966     4.09   0.000     .0021232    .0060298
+                      _cons |   -3.67954   .5267567    -6.99   0.000    -4.711965   -2.647116
+----------------------------+----------------------------------------------------------------
+inflate                     |
+            nonmotor_volume |  -1.865062   .3296534    -5.66   0.000     -2.51117   -1.218953
+                      _cons |    2.64845   .1738868    15.23   0.000     2.307638    2.989262
+----------------------------+----------------------------------------------------------------
+                   /lnalpha |   1.441838   .0931664    15.48   0.000     1.259235    1.624441
+----------------------------+----------------------------------------------------------------
+                      alpha |   4.228461   .3939506                      3.522727    5.075581
+---------------------------------------------------------------------------------------------
+
+. estat ic
+
+Akaike's information criterion and Bayesian information criterion
+
+-----------------------------------------------------------------------------
+       Model |        Obs  ll(null)  ll(model)      df         AIC        BIC
+-------------+---------------------------------------------------------------
+           . |    440,161 -17419.12  -14973.95      34     30015.9   30389.72
+-----------------------------------------------------------------------------
+               Note: N=Obs used in calculating BIC; see [R] BIC note.
+
+
+++++++++++++++ Model A-a ZINB Model with the "totalpedbikecrashes" as the DV and without LBS variables (and with "nonmotor_volume" as the inflated variable and Robust SEs) +++++++++++++
+
+
+ . zinb totalpedbikecrashes length i.function2 i.walkbikeallowed lts i.bikelaneexistance natwalkind count_cbgbusstops pct_ao0100 d1d d2a_ephhm d3a d3amm d3
+> bao percentmalepopulation percentpopulationover65 percentpopulationunder18 percentblackpopulation percentcartruckvan percentpublictransportation percentwa
+> lkbike r_pctlowwa100 percentunemployed percentenrolledinschool, inflate (nonmotor_volume) robust
+
+Fitting constant-only model:
+
+Iteration 0:   log pseudolikelihood = -19737.021  (not concave)
+Iteration 1:   log pseudolikelihood = -19053.074  
+Iteration 2:   log pseudolikelihood = -17745.952  
+Iteration 3:   log pseudolikelihood = -17600.474  
+Iteration 4:   log pseudolikelihood = -17456.286  
+Iteration 5:   log pseudolikelihood = -17422.025  
+Iteration 6:   log pseudolikelihood =  -17419.15  
+Iteration 7:   log pseudolikelihood = -17419.115  
+Iteration 8:   log pseudolikelihood = -17419.115  
+
+Fitting full model:
+
+Iteration 0:   log pseudolikelihood = -17419.115  
+Iteration 1:   log pseudolikelihood = -16022.535  (not concave)
+Iteration 2:   log pseudolikelihood =  -15812.42  (not concave)
+Iteration 3:   log pseudolikelihood = -15584.021  (not concave)
+Iteration 4:   log pseudolikelihood = -15122.535  
+Iteration 5:   log pseudolikelihood = -15049.396  
+Iteration 6:   log pseudolikelihood =  -15018.14  
+Iteration 7:   log pseudolikelihood = -14990.902  
+Iteration 8:   log pseudolikelihood = -14984.998  
+Iteration 9:   log pseudolikelihood =  -14984.69  
+Iteration 10:  log pseudolikelihood = -14984.687  
+Iteration 11:  log pseudolikelihood = -14984.687  
+
+Zero-inflated negative binomial regression      Number of obs     =    440,161
+                                                Nonzero obs       =      2,900
+                                                Zero obs          =    437,261
+
+Inflation model      = logit                    Wald chi2(28)     =    4417.28
+Log pseudolikelihood = -14984.69                Prob > chi2       =     0.0000
+
+---------------------------------------------------------------------------------------------
+                            |               Robust
+        totalpedbikecrashes |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+----------------------------+----------------------------------------------------------------
+totalpedbikecrashes         |
+                     length |    .000331   .0000215    15.40   0.000     .0002888    .0003731
+                            |
+                  function2 |
+                         2  |  -.0542309   .0727382    -0.75   0.456    -.1967952    .0883334
+                         3  |  -2.549279   .3186902    -8.00   0.000      -3.1739   -1.924658
+                         4  |  -2.679615   .1666536   -16.08   0.000     -3.00625    -2.35298
+                         5  |  -.6309065   .1100801    -5.73   0.000    -.8466595   -.4151536
+                         6  |  -1.645637   .1119322   -14.70   0.000     -1.86502   -1.426254
+                         7  |  -.1371341   .0779861    -1.76   0.079     -.289984    .0157158
+                            |
+          1.walkbikeallowed |  -3.272029   .4430224    -7.39   0.000    -4.140337   -2.403721
+                        lts |   .2485622   .0336101     7.40   0.000     .1826877    .3144368
+        1.bikelaneexistance |  -.2261503   .1465412    -1.54   0.123    -.5133658    .0610652
+                 natwalkind |   .0600665   .0157218     3.82   0.000     .0292524    .0908807
+          count_cbgbusstops |  -.0066733   .0030182    -2.21   0.027    -.0125889   -.0007577
+                 pct_ao0100 |   .0099322   .0015167     6.55   0.000     .0069594    .0129049
+                        d1d |   .0072983   .0007673     9.51   0.000     .0057944    .0088022
+                  d2a_ephhm |   .3846109   .1713695     2.24   0.025     .0487327     .720489
+                        d3a |   .0222338   .0040543     5.48   0.000     .0142875      .03018
+                      d3amm |   -.004589    .006566    -0.70   0.485     -.017458    .0082801
+                      d3bao |  -.0072377   .0048201    -1.50   0.133    -.0166848    .0022095
+      percentmalepopulation |   .0000616   .0025639     0.02   0.981    -.0049636    .0050868
+    percentpopulationover65 |  -.0082831   .0026743    -3.10   0.002    -.0135246   -.0030415
+   percentpopulationunder18 |   .0028884   .0028521     1.01   0.311    -.0027017    .0084785
+     percentblackpopulation |   .0026287   .0008969     2.93   0.003     .0008708    .0043865
+         percentcartruckvan |   .0096473   .0025566     3.77   0.000     .0046365    .0146581
+percentpublictransportation |   .0148145   .0030969     4.78   0.000     .0087447    .0208842
+            percentwalkbike |   .0054585   .0036581     1.49   0.136    -.0017112    .0126282
+              r_pctlowwa100 |   .0147791   .0038855     3.80   0.000     .0071637    .0223946
+          percentunemployed |   .0178505   .0052056     3.43   0.001     .0076477    .0280533
+    percentenrolledinschool |  -.0063386   .0023451    -2.70   0.007    -.0109349   -.0017422
+                      _cons |  -3.508048   .5221675    -6.72   0.000    -4.531478   -2.484619
+----------------------------+----------------------------------------------------------------
+inflate                     |
+            nonmotor_volume |  -1.779578   .3226926    -5.51   0.000    -2.412044   -1.147112
+                      _cons |   2.616176   .1731634    15.11   0.000     2.276781     2.95557
+----------------------------+----------------------------------------------------------------
+                   /lnalpha |   1.448003   .0920707    15.73   0.000     1.267548    1.628458
+----------------------------+----------------------------------------------------------------
+                      alpha |    4.25461   .3917251                      3.552131    5.096013
+---------------------------------------------------------------------------------------------
+
+. estat ic
+
+Akaike's information criterion and Bayesian information criterion
+
+-----------------------------------------------------------------------------
+       Model |        Obs  ll(null)  ll(model)      df         AIC        BIC
+-------------+---------------------------------------------------------------
+           . |    440,161 -17419.12  -14984.69      32    30033.37   30385.21
+-----------------------------------------------------------------------------
+               Note: N=Obs used in calculating BIC; see [R] BIC note.

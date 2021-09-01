@@ -1,0 +1,37 @@
+Variables,Coef.,Std.,z,P>|z|,SubModel
+length,0.0003296,0.0000216,15.27,0,Negative Binomial
+function2_2,-0.0216494,0.073491,-0.29,0.768,Negative Binomial
+function2_3,-2.561246,0.3166011,-8.09,0,Negative Binomial
+function2_4,-2.651211,0.1658764,-15.98,0,Negative Binomial
+function2_5,-0.6385099,0.1099183,-5.81,0,Negative Binomial
+function2_6,-1.62759,0.1108224,-14.69,0,Negative Binomial
+function2_7,-0.1497349,0.0791064,-1.89,0.058,Negative Binomial
+walkbikeallowed,-3.187179,0.45261,-7.04,0,Negative Binomial
+lts,0.2292024,0.0352234,6.51,0,Negative Binomial
+bikelaneexistance,-0.2321963,0.1468415,-1.58,0.114,Negative Binomial
+natwalkind,0.0638902,0.0157363,4.06,0,Negative Binomial
+count_cbgbusstops,-0.0055812,0.0029645,-1.88,0.06,Negative Binomial
+pct_ao0100,0.0089528,0.0015295,5.85,0,Negative Binomial
+d1d,0.0064047,0.0007939,8.07,0,Negative Binomial
+d2a_ephhm,0.359197,0.1712138,2.1,0.036,Negative Binomial
+d3a,0.0175662,0.0043051,4.08,0,Negative Binomial
+d3amm,-0.0056604,0.0065274,-0.87,0.386,Negative Binomial
+d3bao,-0.0089462,0.0047373,-1.89,0.059,Negative Binomial
+percentmalepopulation,-0.0003219,0.0025461,-0.13,0.899,Negative Binomial
+percentpopulationover65,-0.009188,0.0027025,-3.4,0.001,Negative Binomial
+percentpopulationunder18,0.0024781,0.0028425,0.87,0.383,Negative Binomial
+percentblackpopulation,0.0023706,0.0008965,2.64,0.008,Negative Binomial
+percentcartruckvan,0.0115358,0.0025636,4.5,0,Negative Binomial
+percentpublictransportation,0.0151644,0.0030843,4.92,0,Negative Binomial
+percentwalkbike,0.0043689,0.0036071,1.21,0.226,Negative Binomial
+r_pctlowwa100,0.0129428,0.0036922,3.51,0,Negative Binomial
+percentunemployed,0.0185038,0.0051682,3.58,0,Negative Binomial
+percentenrolledinschool,-0.0055834,0.0023497,-2.38,0.017,Negative Binomial
+vehicle_volume,0.0001473,0.000055,2.68,0.007,Negative Binomial
+nonmotor_volume,0.0040555,0.000996,4.07,0,Negative Binomial
+_cons,-3.688561,0.5282829,-6.98,0,Negative Binomial
+inflate,,,,,
+nonmotor_volume,-1.878884,0.3301886,-5.69,0,Logit
+_cons,2.654919,0.1741919,15.24,0,Logit
+/lnalpha,1.443677,0.0934349,15.45,0,
+alpha,4.236245,0.395813,3.527355,5.0876,
